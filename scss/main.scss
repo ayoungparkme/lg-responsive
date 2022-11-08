@@ -1,7 +1,6 @@
-//디자인 가이드
-
 @import "vars";
 @import "mixins";
+
 #main-visual {
   height: 100vh;
   overflow: hidden;
@@ -91,22 +90,9 @@
   }
 }
 // main-visual end
+
 .contents-box {
-  // padding-top: 100px;
-  // padding-bottom: 100px;
-  // padding-left: 50px;
-  // padding-right: 50px;
-
   padding: 100px 0;
-  // background-color: #000;
-  // background-image: url("");
-  // background-position: url("");
-  // background-size: 50px;
-  // background-repeat: no-repeat;
-  //background:no-repeat 50% #f00 / 50px;
-
-  // font-size: 40px;
-  // font-family: "fdsjfkd";
   h2 {
     font-size: $h2;
     color: $main-color;
@@ -140,7 +126,6 @@
         &:hover {
           .txt {
             bottom: 50px;
-            //color: #000;
           }
         }
         img {
@@ -153,11 +138,6 @@
           color: #fff;
           left: 50px;
           bottom: -50px;
-          // transition-property: bottom, color;
-          // transition-duration: 0.5s;
-          // transition-timing-function: ease-in-out;
-          // transition-delay: 0.5s; //1s = 1000ms
-
           transition: all 0.5s ease-in-out;
 
           h3 {
@@ -214,9 +194,6 @@
   .banner {
     ul {
       li {
-        // border-top-style: solid;
-        // border-top-width: 3px;
-        // border-top-color: #000;
         border-top: 3px solid #000;
         h3 {
           font-size: $h3;
@@ -227,6 +204,88 @@
           margin-top: 50px;
           span {
             color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 640px) {
+  .contents-box {
+    padding: 100px 0 0 0;
+    .container {
+      padding: 0 20px;
+      overflow: hidden;
+      word-break: keep-all;
+      h2 {
+        font-size: $h3;
+      }
+      p {
+        font-size: $h4 * 0.8;
+      }
+      .btns {
+        right: 40px;
+        top: 85px;
+        i {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  #main-visual {
+    .list {
+      height: 80vw;
+      li {
+        .txt {
+          font-size: $h4;
+          left: 50px;
+          text-align: left;
+          strong {
+            font-size: $h2;
+          }
+        }
+      }
+    }
+    button {
+      display: none;
+    }
+  }
+
+  #introduce {
+    .container {
+      > p {
+        color: #999;
+        line-height: 1.5;
+      }
+      .banner {
+        ul {
+          li {
+            overflow: visible;
+            img {
+              height: 295px;
+            }
+            .txt {
+              bottom: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #notice {
+    .btns {
+      display: none;
+    }
+    .banner {
+      height: 500px;
+      overflow: hidden;
+      ul {
+        li {
+          border-top: 1px solid #000;
+          h3 {
+            font-size: $h4 * 0.8;
+            font-weight: 500;
           }
         }
       }

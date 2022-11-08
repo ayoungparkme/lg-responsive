@@ -197,3 +197,68 @@
 #notice .banner ul li .date span {
   color: #dd3156;
 }
+
+@media all and (max-width: 640px) {
+  .contents-box {
+    padding: 100px 0 0 0;
+  }
+  .contents-box .container {
+    padding: 0 20px;
+    overflow: hidden;
+    word-break: keep-all;
+  }
+  .contents-box .container h2 {
+    font-size: 24px;
+  }
+  .contents-box .container p {
+    font-size: 16px;
+  }
+  .contents-box .container .btns {
+    right: 40px;
+    top: 85px;
+  }
+  .contents-box .container .btns i {
+    font-size: 24px;
+  }
+  #main-visual .list {
+    height: 80vw;
+  }
+  #main-visual .list li .txt {
+    font-size: 20px;
+    left: 50px;
+    text-align: left;
+  }
+  #main-visual .list li .txt strong {
+    font-size: 36px;
+  }
+  #main-visual button {
+    display: none;
+  }
+  #introduce .container > p {
+    color: #999;
+    line-height: 1.5;
+  }
+  #introduce .container .banner ul li {
+    overflow: visible;
+  }
+  #introduce .container .banner ul li img {
+    height: 295px;
+  }
+  #introduce .container .banner ul li .txt {
+    bottom: 100px;
+  }
+  #notice .btns {
+    display: none;
+  }
+  #notice .banner {
+    height: 500px;
+    overflow: hidden;
+  }
+  #notice .banner ul li {
+    border-top: 1px solid #000;
+  }
+  #notice .banner ul li h3 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

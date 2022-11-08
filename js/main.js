@@ -19,36 +19,27 @@ const mainSlider = new Swiper("#main-visual", {
 });
 
 const introduceSlider = new Swiper("#introduce .banner", {
-  slidesPerView: 2,
+  slidesPerView: 1,
   loop: true,
   spaceBetween: 20,
-  //centeredSlides: true,
   navigation: {
     nextEl: "#introduce .btn-next",
     prevEl: "#introduce .btn-prev",
   },
 });
+
 const activitySlider = new Swiper("#activity  .banner", {
-  slidesPerView: 4,
-  slidesPerGroup: 4,
+  slidesPerView: 1,
   loop: true,
   spaceBetween: 20,
-
-  //centeredSlides: true,
   navigation: {
     nextEl: "#activity .btn-next",
     prevEl: "#activity .btn-prev",
   },
 });
+
 const noticeSlider = new Swiper("#notice  .banner", {
   slidesPerView: 3,
-  slidesPerGroup: 3,
-  loop: true,
+  direction: "vertical",
   spaceBetween: 20,
-
-  //centeredSlides: true,
-  navigation: {
-    nextEl: "#notice .btn-next",
-    prevEl: "#notice .btn-prev",
-  },
 });

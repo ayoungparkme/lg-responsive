@@ -19,9 +19,6 @@ button {
 
 .container {
   width: 1400px;
-  // margin-left: auto;
-  // margin-right: auto;
-
   margin: 0 auto;
   position: relative;
 }
@@ -70,6 +67,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
+  display: none;
   > li {
     position: relative;
     &:after {
@@ -198,7 +196,6 @@ footer {
 }
 
 @media all and (max-width: 1400px) {
-  // 여기다가 1280보다 작아졌을때 어떤 css 쓸건지 적용
   .container {
     width: 100%;
   }
@@ -230,7 +227,6 @@ footer {
 }
 
 @media all and (max-width: 1400px) {
-  // 여기다가 1280보다 작아졌을때 어떤 css 쓸건지 적용
   .container {
     width: 100%;
   }
@@ -310,11 +306,9 @@ footer {
 }
 
 @media all and (max-width: 960px) {
-  // 여기다가 960px보다 작아졌을때 어떤 css 쓸건지 적용
 }
 
 @media all and (max-width: 640px) {
-  // 여기다가 640px보다 작아졌을때 어떤 css 쓸건지 적용
   header {
     height: 60px;
     .container {
@@ -337,6 +331,20 @@ footer {
       > li {
         .depth01 {
           height: 60px;
+        }
+      }
+    }
+  }
+
+  footer {
+    #family-site {
+      margin: 0 auto;
+      padding: 30px 0 20px 0;
+      ul {
+        li {
+          img {
+            height: 20px;
+          }
         }
       }
     }
