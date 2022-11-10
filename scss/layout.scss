@@ -5,6 +5,7 @@ body {
   font-family: "Roboto", "Noto Sans KR", "돋움";
   color: #111;
   font-size: 16px;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -19,6 +20,9 @@ button {
 
 .container {
   width: 1400px;
+  // margin-left: auto;
+  // margin-right: auto;
+
   margin: 0 auto;
   position: relative;
 }
@@ -56,18 +60,19 @@ header {
     align-items: center;
     li {
       margin-left: 20px;
+      &:last-child {
+        display: none;
+      }
       &:hover {
         color: $main-color;
       }
     }
   }
 }
-
 #gnb .list {
   width: 100%;
   display: flex;
   justify-content: center;
-  display: none;
   > li {
     position: relative;
     &:after {
@@ -80,12 +85,6 @@ header {
       left: -20px;
       padding-left: 20px;
       padding-right: 20px;
-    }
-    &:hover .depth01 {
-      color: $main-color;
-    }
-    &:hover .depth02 {
-      display: block;
     }
     .depth01 {
       display: flex;
@@ -126,7 +125,6 @@ header {
     }
   }
 }
-
 footer {
   #family-site {
     margin: 100px 0;
@@ -134,6 +132,7 @@ footer {
       display: flex;
       justify-content: space-between;
       li {
+        width: auto;
         img {
           height: 30px;
         }
@@ -194,23 +193,6 @@ footer {
     }
   }
 }
-
-@media all and (max-width: 1400px) {
-  .container {
-    width: 100%;
-  }
-  header {
-    .container {
-      h1 {
-        left: 50px;
-      }
-      .util {
-        right: 50px;
-      }
-    }
-  }
-}
-
 @media all and (min-width: 1280px) {
   #gnb {
     .list {
@@ -227,8 +209,11 @@ footer {
 }
 
 @media all and (max-width: 1400px) {
+  // 여기다가 1280보다 작아졌을때 어떤 css 쓸건지 적용
   .container {
     width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
   }
   header {
     .container {
@@ -238,6 +223,11 @@ footer {
       .util {
         right: 50px;
       }
+    }
+  }
+  footer {
+    #footer {
+      padding: clamp(30px, 100/1400 * 100vw, 100px) 0;
     }
   }
 }
@@ -305,10 +295,49 @@ footer {
   }
 }
 
-@media all and (max-width: 960px) {
+@media all and (max-width: 980px) {
+  // 여기다가 960px보다 작아졌을때 어떤 css 쓸건지 적용
+  .container {
+    padding: 0 20px;
+  }
+  footer {
+    #family-site {
+      // width: 100%;
+      // overflow-x: scroll;
+      margin: clamp(30px, 100/980 * 100vw, 100px) 0;
+      // ul {
+      //   display: block;
+      //   white-space: nowrap;
+      //   li {
+      //     display: inline-block;
+      //     margin-right: 30px;
+      //   }
+      // }
+    }
+    #footer {
+      .container {
+        flex-direction: column;
+        font-size: 14px;
+        .info {
+          .util {
+            ul {
+              justify-content: space-between;
+              li {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+        .sns {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 640px) {
+  // 여기다가 640px보다 작아졌을때 어떤 css 쓸건지 적용
   header {
     height: 60px;
     .container {
@@ -331,20 +360,6 @@ footer {
       > li {
         .depth01 {
           height: 60px;
-        }
-      }
-    }
-  }
-
-  footer {
-    #family-site {
-      margin: 0 auto;
-      padding: 30px 0 20px 0;
-      ul {
-        li {
-          img {
-            height: 20px;
-          }
         }
       }
     }

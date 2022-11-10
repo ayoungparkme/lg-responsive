@@ -111,8 +111,9 @@
   background: #f4f4f4;
 }
 #introduce .banner ul li {
-  height: 380px;
   width: 50%;
+  min-height: 280px;
+  aspect-ratio: 1.5/1;
   position: relative;
   overflow: hidden;
 }
@@ -191,6 +192,9 @@
   line-height: 1.5;
   margin: 30px 0;
 }
+#notice .banner ul li p {
+  line-height: 1.5;
+}
 #notice .banner ul li .date {
   margin-top: 50px;
 }
@@ -198,67 +202,87 @@
   color: #dd3156;
 }
 
-@media all and (max-width: 640px) {
-  .contents-box {
-    padding: 100px 0 0 0;
-  }
-  .contents-box .container {
-    padding: 0 20px;
-    overflow: hidden;
-    word-break: keep-all;
-  }
-  .contents-box .container h2 {
-    font-size: 24px;
-  }
-  .contents-box .container p {
-    font-size: 16px;
-  }
-  .contents-box .container .btns {
-    right: 40px;
-    top: 85px;
-  }
-  .contents-box .container .btns i {
-    font-size: 24px;
-  }
-  #main-visual .list {
-    height: 80vw;
-  }
+@media all and (max-width: 1280px) {
   #main-visual .list li .txt {
-    font-size: 20px;
-    left: 50px;
-    text-align: left;
+    left: 15vw;
+    font-size: clamp(16px, 1.875vw, 24px);
   }
   #main-visual .list li .txt strong {
-    font-size: 36px;
+    font-size: clamp(24px, 5.625vw, 72px);
   }
-  #main-visual button {
-    display: none;
+  #main-visual .pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    border: 3px solid #fff;
+    margin: 0 5px;
+    background-color: transparent;
+    transition: all 0.25s ease;
   }
-  #introduce .container > p {
-    color: #999;
-    line-height: 1.5;
+  #main-visual .pagination .swiper-pagination-bullet-active {
+    width: 80px;
+    background-color: #fff;
   }
-  #introduce .container .banner ul li {
-    overflow: visible;
+  .contents-box h2 {
+    font-size: clamp(24px, 2.8125vw, 36px);
   }
-  #introduce .container .banner ul li img {
-    height: 295px;
+}
+@media all and (max-width: 980px) {
+  .contents-box {
+    padding: clamp(30px, 10.2040816327vw, 100px) 0;
   }
-  #introduce .container .banner ul li .txt {
-    bottom: 100px;
+  .contents-box .banner {
+    margin-top: clamp(30px, 10.2040816327vw, 100px);
+  }
+  #main-visual .btn {
+    padding: 0;
+  }
+  #main-visual .btn .material-icons {
+    font-size: 48px;
+  }
+  #introduce .btns {
+    top: 90px;
+    right: 20px;
+  }
+  #introduce .btns i {
+    font-size: 20px;
+  }
+  #introduce .banner ul li .txt {
+    left: 30px;
+  }
+  #introduce .banner ul li .txt h3 {
+    font-size: clamp(20px, 3.6734693878vw, 36px);
+  }
+  #activity .btns {
+    top: 40px;
+    right: 20px;
+  }
+  #activity .btns i {
+    font-size: 20px;
+  }
+  #activity .banner ul li .txt {
+    left: 30px;
+  }
+  #activity .banner ul li .txt h3 {
+    font-size: clamp(20px, 3.6734693878vw, 36px);
   }
   #notice .btns {
-    display: none;
+    top: 40px;
+    right: 20px;
   }
-  #notice .banner {
-    height: 500px;
-    overflow: hidden;
-  }
-  #notice .banner ul li {
-    border-top: 1px solid #000;
+  #notice .btns i {
+    font-size: 20px;
   }
   #notice .banner ul li h3 {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: clamp(20px, 2.4489795918vw, 24px);
+  }
+}
+@media all and (max-width: 640px) {
+  #main-visual .list li .txt {
+    left: 15vw;
+    right: 15vw;
+  }
+  #main-visual .list li .txt .desc {
+    width: auto;
   }
 }
